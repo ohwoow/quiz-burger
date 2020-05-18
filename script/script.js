@@ -142,7 +142,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 
                 default:
                 prevBtn.style.display = (indexQuestion === 0 ? 'none' : 'block');
-                nextBtn.style.display = (indexQuestion === questions.length ? 'none' : 'block');
+                nextBtn.style.display = (indexQuestion === questions.length + 1? 'none' : 'block');
+                sendBtn.classList.add('d-none');
                 
                 modalQuestion.textContent = `${questions[indexQuestion].question}`; //рендер вопроса
                 renderAnswer(indexQuestion); //передаем в renderAnswer аргумент indexQuestion(индекс вопроса)
